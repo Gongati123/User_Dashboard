@@ -1,0 +1,188 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #abbad1;
+}
+
+/* Navbar */
+.navbar {
+  background-color: hsla(268, 44%, 11%, 0.918); /* Navy blue */
+  color: white;
+  padding: 2.5rem 3rem;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Title (User Dashboard) */
+.nav-logo {
+  font-size: 30px;           /* Increased font size */
+  font-weight: bold;         /* Made bolder */
+  letter-spacing: 1.8px;     /* Slightly more spaced */
+  text-transform: uppercase; /* Optional: makes it all caps */
+  margin: 0;
+}
+
+/* Header (if you use one elsewhere) */
+.header {
+  background: #0077b6;
+  color: white;
+  padding: 1rem;
+}
+
+/* Dashboard Layout */
+.dashboard {
+  display: flex;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+/* Left Section (user list + search) */
+.left {
+  flex: 2;
+}
+
+/* Right Section (form) */
+.right {
+  flex: 1;
+}
+
+/* User Cards */
+.user-card {
+  background: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Create User Form */
+.create-user-form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+
+/* Optional — Link styles (if you use <a> elsewhere) */
+.nav-links a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+/* Search Input (Left Section) */
+.left input {
+  width: 100%;
+  max-width: 800px;        /* make box wider if you want */
+  padding: 14px 18px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 16px;         /* input text size */
+}
+
+/* Style the placeholder text */
+.left input::placeholder {
+  font-size: 18px;         /* increase placeholder text size */
+  color: #64748b;          /* optional: softer gray color */
+  font-weight: 500;        /* optional: make it slightly bolder */
+}
+
+/* Global Input Fields */
+input {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* Buttons */
+button {
+  padding: 10px 18px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3730a3;
+}
+
+
+/* Responsive layout for smaller screens */
+@media (max-width: 900px) {
+  .dashboard {
+    flex-direction: column; /* stack left and right vertically */
+    padding: 1rem;
+  }
+
+  .left, .right {
+    width: 100%; /* each section takes full width */
+  }
+
+  .left input {
+    max-width: 100%; /* ensure input fields don’t overflow */
+  }
+}
+
+.navbar {
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .nav-logo {
+    font-size: 20px; /* slightly smaller text on phones */
+    text-align: center;
+  }
+}
+
+
+.user-card {
+  background: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-3px);
+}
+
+/* On small devices: reduce padding and font size slightly */
+@media (max-width: 600px) {
+  .user-card {
+    padding: 0.8rem;
+    font-size: 14px;
+  }
+}
+
+
+.create-user-form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .create-user-form {
+    padding: 1rem;
+  }
+
+  .create-user-form input {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  button {
+    width: 100%; /* full-width button on small screens */
+  }
+}
